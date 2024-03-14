@@ -12,6 +12,17 @@ spec:
     env:
       - name: BP_JVM_VERSION
         value: "21"
+      - name: BP_OPENTELEMETRY_ENABLED
+        value: "true"
+  env:
+    - name: OTEL_JAVAAGENT_ENABLED
+      value: "true"
+    - name: OTEL_METRICS_EXPORTER
+      value: "otlp"
+    - name: OTEL_TRACES_EXPORTER
+      value: "otlp"
+    - name: OTEL_EXPORTER_OTLP_ENDPOINT
+      value: "http://wavefront-proxy.observability-system.svc.cluster.local:4317"
   params:
   - name: annotations
     value:

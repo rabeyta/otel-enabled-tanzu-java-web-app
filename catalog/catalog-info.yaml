@@ -2,9 +2,10 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: otel-enabled-tanzu-java-web-app
-  description: Tanzu Java Web App
+  description: otel Java Web App
   tags:
     - app-accelerator
+    - otel
     - java
     - spring
     - web
