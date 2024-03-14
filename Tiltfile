@@ -2,7 +2,7 @@ LOCAL_PATH = os.getenv("LOCAL_PATH", default='.')
 NAMESPACE = os.getenv("NAMESPACE", default='default')
 WAIT_TIMEOUT = os.getenv("WAIT_TIMEOUT", default='10m00s')
 TYPE = os.getenv("TYPE", default='web')
-
+allow_k8s_contexts('arobert-full')
 k8s_custom_deploy(
     'otel-enabled-tanzu-java-web-app',
     apply_cmd="tanzu apps workload apply -f config/workload.yaml --update-strategy replace --debug --live-update" +
